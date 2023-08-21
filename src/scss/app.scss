@@ -1,0 +1,129 @@
+@import 'config';
+@import 'header';
+@import 'signin';
+@import 'book-card';
+@import 'book-list';
+@import 'books-not-found';
+@import 'search-bar';
+@import 'recent-book-card';
+@import 'recent-books';
+@import 'specific-book';
+@import 'book-info';
+@import 'something-wrong';
+@import 'cart-item';
+@import 'cart';
+@import 'cart-empty';
+@import 'page-not-found';
+@import 'responsive';
+@import 'side-component';
+
+@font-face {
+	font-family: 'Lato';
+	src: url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	overflow-x: hidden;
+	background-color: $background-color;
+	color: $text-color-primary;
+}
+
+a {
+	text-decoration: none;
+	color: $text-color-secondary;
+}
+
+button {
+	cursor: pointer;
+	font-family: inherit;
+	font-weight: 700;
+	border-radius: 5px;
+	border: none;
+	@include shadow;
+}
+
+button:active {
+	transform: scale(0.95);
+}
+
+button:disabled {
+	cursor: not-allowed;
+	background-color: $text-color-primary;
+	color: white;
+}
+
+button:disabled:active {
+	transform: none;
+}
+
+input {
+	color: $text-color-secondary;
+	font-family: inherit;
+	padding: 10px 10px;
+	border-radius: 5px;
+
+	&:focus {
+		color: $text-color-secondary;
+		outline: none;
+	}
+
+	&::-webkit-outer-spin-button,
+	&::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+
+	&[type='number'] {
+		-moz-appearance: textfield;
+	}
+}
+
+ul {
+	list-style-type: none;
+}
+
+footer {
+	width: 100vw;
+	height: 100px;
+	padding: 20px 0;
+	margin-top: 110px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+	color: white;
+	font-size: 14px;
+	background-image: linear-gradient(to bottom right, #ff1a1a, #b30000);
+
+	a {
+		color: white;
+	}
+}
+
+.card {
+	font-family: inherit;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 5px;
+	background-color: white;
+	@include shadow;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.success-toast {
+	background: white;
+	color: var(--text-color-main);
+	font-family: 'Lato', sans-serif;
+}
+
+.icon-clear {
+	&:hover {
+		cursor: pointer;
+		color: $red-color-primary;
+	}
+}

@@ -1,0 +1,41 @@
+.book-list {
+	margin: 150px auto 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
+	&__content {
+		width: 1600px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__list {
+		min-height: calc(100vh - 300px);
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+		gap: 20px;
+		flex-wrap: wrap;
+		margin: 50px 0;
+	}
+
+	&__tag-filter {
+		width: 100%;
+		max-width: 1600px;
+		margin: 25px 0 0 10px;
+		font-size: 18px;
+
+		& p {
+			color: white;
+			max-width: 200px;
+			padding: 5px 10px;
+			background-color: $red-color-secondary;
+			border-radius: 2px;
+		}
+	}
+}

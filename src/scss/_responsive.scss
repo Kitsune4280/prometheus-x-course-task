@@ -1,0 +1,281 @@
+@include media-xs {
+	.header {
+		height: 70px;
+
+		&__container {
+			padding: 10px;
+
+			h2 {
+				font-size: 16px;
+			}
+		}
+
+		nav {
+			position: relative;
+		}
+
+		nav ul {
+			position: absolute;
+			left: -84vw;
+			top: 60px;
+			width: 100vw;
+			z-index: 1;
+			padding: 15px 10px;
+			background-color: rgba(255, 255, 255, 0.9);
+			flex-direction: column;
+			gap: 25px;
+			align-items: center;
+			transition: transform 0.3s ease-in-out;
+
+			button {
+				padding: 10px;
+				font-weight: 400;
+				width: 100px;
+			}
+		}
+
+		&__cart-item {
+			order: 2;
+		}
+
+		&__logout-item {
+			order: 3;
+		}
+
+		&__username-item {
+			order: 1;
+		}
+
+		&__collapsed {
+			transform: translateY(-151%);
+		}
+
+		&__expanded {
+			transform: translateY(0);
+		}
+	}
+
+	.signin {
+		height: calc(100vh - 70px);
+		width: 100vw;
+		margin-top: 0;
+		margin-bottom: -150px;
+
+		&__container {
+			width: 100%;
+			height: 100%;
+			justify-content: center;
+			padding: 0 8px;
+
+			& form {
+				margin: 0 8px;
+			}
+
+			& img {
+				width: 200px;
+				height: 200px;
+				margin-bottom: 20px;
+			}
+		}
+
+		&__input-container {
+			& label {
+				font-size: 14px;
+			}
+
+			& input {
+				font-size: 16px;
+			}
+		}
+	}
+
+	.book-list {
+		width: 100vw;
+		min-height: 100vh;
+		margin: 100px 0 0 0;
+
+		&__content {
+			width: 95%;
+		}
+	}
+
+	.search-bar {
+		flex-direction: column;
+		justify-content: space-evenly;
+		gap: 10px;
+		padding: 5px;
+
+		&__search {
+			width: 100%;
+			margin-right: 0;
+		}
+
+		select {
+			width: 100%;
+			margin: 0;
+		}
+	}
+
+	.books-not-found {
+		width: 100vw;
+
+		h1 {
+			font-size: 20px;
+		}
+
+		img {
+			width: 70%;
+		}
+	}
+
+	.specific-book {
+		width: 100vw;
+		margin: 100px 0 0 0;
+
+		&__content {
+			flex-direction: column;
+			align-items: center;
+			margin: 0;
+		}
+
+		&__side {
+			width: 97%;
+		}
+	}
+
+	.book-info {
+		width: 100%;
+		height: unset;
+
+		&__top {
+			flex-direction: column;
+			height: unset;
+		}
+
+		&__book-cover {
+			width: 100%;
+			min-height: 400px;
+		}
+
+		&__book-data {
+			width: 100%;
+
+			h1 {
+				font-size: 30px;
+			}
+
+			h2 {
+				font-size: 20px;
+			}
+		}
+
+		&__book-descr {
+			margin: 0 0 15px 0;
+			padding: 0 10px;
+			font-size: 18px;
+		}
+	}
+
+	.cart {
+		width: 100vw;
+		padding: 0 5px;
+
+		&__buttons {
+			justify-content: center;
+
+			a,
+			button {
+				background-color: $red-color-secondary;
+				color: white;
+			}
+
+			button {
+				margin-right: -20px;
+			}
+		}
+
+		&__total {
+			padding: 5px;
+		}
+
+		h2 {
+			font-size: 16px;
+		}
+	}
+
+	.cart-item {
+		height: 100px;
+		grid-template-columns: 4fr 1fr 1fr 1fr;
+		padding: 5px;
+
+		&__link {
+			display: block;
+		}
+
+		&__book-info {
+			height: 95%;
+			margin: 0 5px;
+
+			h2,
+			h4 {
+				width: 20ch;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+
+			h2 {
+				font-size: 16px;
+			}
+
+			h4 {
+				font-size: 14px;
+			}
+		}
+
+		&__trash-icon {
+			font-size: 1.2em;
+		}
+
+		img {
+			display: none;
+		}
+
+		h3 {
+			font-size: 12px;
+		}
+	}
+
+	.cart-empty {
+		margin: 50px 0 -150px 0;
+
+		h1 {
+			font-size: 20px;
+		}
+
+		img {
+			max-height: 150px;
+		}
+	}
+
+	.recent-books {
+		width: 100vw;
+		margin-bottom: -100px;
+		padding: 0 10px;
+	}
+
+	.page-not-found {
+		width: 100vw;
+		height: 100vh;
+		margin-bottom: -220px;
+
+		img {
+			max-width: 100%;
+		}
+	}
+
+	.footer {
+		margin-top: 150px;
+		height: 70px;
+	}
+}

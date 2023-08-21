@@ -1,0 +1,13 @@
+.something-wrong {
+	height: 100vh;
+	margin: -100px 0;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	img {
+		max-height: 30%;
+	}
+}
